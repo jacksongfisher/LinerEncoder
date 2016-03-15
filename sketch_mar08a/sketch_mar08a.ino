@@ -1,7 +1,7 @@
 int LightSrc [4] = {3, 2, 1, 0}; // The adress of the pins to which the photoresistor are connected
 int preIndex, currentLength, preRead, counter;
 
-const double UnitToMM = 1.0687; // For calibration later
+const double UnitToMM = 1.0585; // Calibrated value
 
 int binPow ( int index ) // Our much better POW funciton
 {
@@ -57,7 +57,7 @@ void setup() // The first run of the code, you may may want to raise the baud ra
   }
   preIndex  = BinToDec(Lights); // Set up the intial location
   preRead = preIndex;
-  currentLength = 0; // yeah
+  currentLength = -0.7805; // Systematic error
 }
 
 void loop() // What runs and runs
